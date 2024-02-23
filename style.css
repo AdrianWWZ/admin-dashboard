@@ -22,7 +22,8 @@ body {
 .sidebar {
   grid-column: 1 / 2;
   grid-row: 1 / 4;
-  background-color: aqua;
+  background-color: #350311;
+  color: #fecdd3;
 }
 
 .sidebar-title {
@@ -30,6 +31,7 @@ body {
   display: flex;
   align-items: center;
   padding: 2rem 2rem;
+  cursor: alias;
 }
 
 .sidebar-title .material-symbols-outlined {
@@ -41,8 +43,47 @@ body {
   margin-right: 1rem;
 }
 
-.sidebar-content ul {
+.sidebar-content {
+  padding: 1rem 0;
+  font-size: 32px;
+}
+
+.sidebar-content .material-symbols-outlined {
+  font-size: 36px;
+}
+
+.sidebar-content ul,
+.sidebar-tools ul {
   list-style-type: none;
+}
+
+.sidebar-content ul li a,
+.sidebar-tools ul li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.75rem 3rem;
+  color: #fecdd3;
+}
+
+.sidebar-content ul li a:hover,
+.sidebar-tools ul li a:hover {
+  background-color: #fecdd3;
+  color: #350311;
+}
+
+.sidebar-content ul li a span,
+.sidebar-tools ul li a span {
+  margin-right: 1rem;
+}
+
+.sidebar-tools {
+  font-size: 32px;
+  padding: 4rem 0;
+}
+
+.sidebar-tools .material-symbols-outlined {
+  font-size: 36px;
 }
 
 .header,
