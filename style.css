@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #fff1f2;
+  background-color: #fecdd3;
   color: #350311;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -15,6 +15,11 @@ body {
   min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr 1.5fr 4fr 4fr;
+}
+
+ul {
+  list-style-type: none;
 }
 
 .material-symbols-outlined {
@@ -23,7 +28,7 @@ body {
 
 .sidebar {
   grid-column: 1 / 2;
-  grid-row: 1 / 4;
+  grid-row: 1 / 7;
   background-color: #350311;
   color: #fecdd3;
 }
@@ -40,7 +45,11 @@ body {
   font-size: 64px;
 }
 
-.sidebar-title span {
+.sidebar-title span,
+.sidebar-content ul li a span,
+.sidebar-tools ul li a span,
+.search-bar span,
+.display-profile span {
   margin-right: 1rem;
 }
 
@@ -53,11 +62,7 @@ body {
 .sidebar-tools .material-symbols-outlined,
 .header .material-symbols-outlined {
   font-size: 36px;
-}
-
-.sidebar-content ul,
-.sidebar-tools ul {
-  list-style-type: none;
+  cursor: alias;
 }
 
 .sidebar-content ul li a,
@@ -72,16 +77,11 @@ body {
 .sidebar-content ul li a:hover,
 .sidebar-content ul li a:focus,
 .sidebar-tools ul li a:hover,
-.sidebar-tools ul li a:focus {
+.sidebar-tools ul li a:focus,
+.menu-options ul li button:hover,
+.menu-options ul li button:focus {
   background-color: #fecdd3;
   color: #350311;
-}
-
-.sidebar-content ul li a span,
-.sidebar-tools ul li a span,
-.search-bar span,
-.display-profile span {
-  margin-right: 1rem;
 }
 
 .sidebar-tools {
@@ -90,6 +90,7 @@ body {
 }
 
 .header {
+  background-color: #fff1f2;
   height: 6rem;
   display: grid;
   grid-auto-flow: column;
@@ -131,4 +132,56 @@ body {
   width: 4rem;
   height: 4rem;
   margin: 0 2rem;
+}
+
+.menu {
+  height: 9rem;
+  background-color: #fff1f2;
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4rem;
+}
+
+.user-profile {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.user-picture {
+  background-image: url(img/profile-picture.jpg);
+  background-size: 200%;
+  background-position: 50% 50%;
+  border-radius: 50%;
+  width: 6rem;
+  height: 6rem;
+  margin-right: 2rem;
+}
+
+.user-greeting p {
+  font-size: 18px;
+  margin-bottom: 0.5rem;
+}
+
+.user-name {
+  font-size: 32px;
+}
+
+.menu-options ul {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 2rem;
+}
+
+.menu-options ul li button {
+  background-color: #350311;
+  color: #fff1f2;
+  border: none;
+  border-radius: 35px;
+  padding: 1rem 2.5rem;
+  font-size: 24px;
+  font-weight: 700;
 }
