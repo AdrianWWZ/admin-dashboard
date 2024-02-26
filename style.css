@@ -24,6 +24,7 @@ ul {
 
 h1 {
   font-size: 32px;
+  margin-bottom: 1rem;
 }
 
 .material-symbols-outlined {
@@ -67,7 +68,7 @@ h1 {
 .header .material-symbols-outlined,
 .project-icon .material-symbols-outlined {
   font-size: 36px;
-  cursor: alias;
+  cursor: pointer;
 }
 
 .sidebar-content ul li a,
@@ -195,17 +196,14 @@ h1 {
 
 .main-page {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 3fr 1fr;
   padding: 2rem;
-}
-
-.project-page h1 {
-  margin-bottom: 1rem;
+  gap: 2rem;
 }
 
 .projects {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 0.9fr));
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1.4fr));
   gap: 2rem;
 }
 
@@ -239,6 +237,7 @@ h1 {
 
 .project-content p {
   font-size: 20px;
+  color: #9f1239;
 }
 
 .project-icon {
@@ -248,4 +247,31 @@ h1 {
   position: absolute;
   top: 75%;
   left: 55%;
+}
+
+.announcements {
+  width: 100%;
+  height: 400px;
+  background-color: #fff1f2;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.announcement {
+  padding: 1rem 0;
+}
+
+.announcement h2 {
+  font-size: 20px;
+}
+
+.announcement p {
+  font-size: 16px;
+  color: #9f1239;
+}
+
+.announcement:nth-child(1),
+.announcement:nth-child(2) {
+  border-bottom: 1px solid #9f1239;
 }
